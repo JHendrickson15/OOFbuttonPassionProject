@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="s28-Kl-fmc">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Oof Button-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Oof Button" id="BYZ-38-t0r" customClass="ButtonViewController" customModule="OOFApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8oq-xt-jCo">
+                                <rect key="frame" x="7" y="275" width="400" height="400"/>
+                                <color key="backgroundColor" red="1" green="0.17421289030000001" blue="0.075796340749999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8oq-xt-jCo" secondAttribute="height" multiplier="1:1" id="9vz-yJ-GlR"/>
+                                    <constraint firstAttribute="width" constant="400" id="CNa-3M-ffk"/>
+                                    <constraint firstAttribute="height" constant="400" id="qlE-nE-h3X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="45"/>
+                                <state key="normal" title="OOF">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="200"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="oofButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2m4-6X-ZkB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFD-6g-nnW">
+                                <rect key="frame" x="309" y="98" width="80" height="30"/>
+                                <state key="normal" title="More OOFS"/>
+                                <connections>
+                                    <segue destination="Uw5-d0-OEW" kind="show" id="2iF-gc-Kc6"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ycL-1x-WnN">
+                                <rect key="frame" x="18" y="208" width="378" height="31"/>
+                                <connections>
+                                    <action selector="audioSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="zkZ-5k-hwM"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4O-CW-9PN">
+                                <rect key="frame" x="304" y="158" width="85" height="30"/>
+                                <state key="normal" title="Remove Ads"/>
+                                <connections>
+                                    <segue destination="1J0-LA-3gN" kind="show" id="NCZ-RW-VYk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="D4O-CW-9PN" firstAttribute="top" secondItem="WFD-6g-nnW" secondAttribute="bottom" constant="30" id="1Ic-Rx-SHG"/>
+                            <constraint firstItem="ycL-1x-WnN" firstAttribute="top" secondItem="D4O-CW-9PN" secondAttribute="bottom" constant="20" id="5X4-uZ-eQc"/>
+                            <constraint firstItem="ycL-1x-WnN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="6Xq-I1-LC4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WFD-6g-nnW" secondAttribute="trailing" constant="25" id="Ep3-3V-QCH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ycL-1x-WnN" secondAttribute="trailing" constant="20" id="LEE-Fv-dCS"/>
+                            <constraint firstItem="8oq-xt-jCo" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="NG3-9i-B3I"/>
+                            <constraint firstItem="8oq-xt-jCo" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="P7q-Kn-Fet"/>
+                            <constraint firstItem="WFD-6g-nnW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="cMU-kv-Vci"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="D4O-CW-9PN" secondAttribute="trailing" constant="25" id="meG-6V-H1o"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="krG-bt-DpX"/>
+                    <connections>
+                        <outlet property="volumeSliderOutlet" destination="ycL-1x-WnN" id="1D9-VD-3U8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2455.072463768116" y="101.78571428571428"/>
+        </scene>
+        <!--MORE OOFS-->
+        <scene sceneID="Vdg-Uu-oLu">
+            <objects>
+                <viewController id="Uw5-d0-OEW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oPp-H9-uf9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="zqR-m2-Wbp"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="MORE OOFS" id="dDR-4R-8ea"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8tY-cz-20d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3364" y="-119"/>
+        </scene>
+        <!--Remove Ads-->
+        <scene sceneID="UnE-Nc-JlW">
+            <objects>
+                <viewController id="1J0-LA-3gN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="41Z-1b-YAr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="CqR-29-5eW"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Remove Ads" id="n4f-Ze-iw3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZR5-le-bbR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3365" y="552"/>
+        </scene>
+        <!--Oof Button -->
+        <scene sceneID="aYM-kQ-nKO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="s28-Kl-fmc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Oof Button " id="2A5-XH-yZj">
+                        <color key="badgeColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HkA-br-cMU">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Ltn-1c-FtN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xto-x5-nMV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1544.9275362318842" y="101.78571428571428"/>
+        </scene>
+    </scenes>
+</document>
